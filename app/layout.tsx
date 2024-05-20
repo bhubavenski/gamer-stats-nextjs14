@@ -28,10 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${spartan.variable}`}>
-
+        <header>KO staa</header>
         <main className="font-spartan">
           {children}
         </main>
+        <footer>brat</footer>
       </body>
     </html>
   );

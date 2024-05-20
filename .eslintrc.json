@@ -11,7 +11,7 @@
       {
         "properties": "never",
         "ignoreDestructuring": true,
-        "allow": ["League_Spartan"] // regex pattern to allow snake_case
+        "allow": ["League_Spartan"]
       }
     ]
   }
