@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, League_Spartan } from 'next/font/google';
 import './globals.css';
 import React from 'react';
+import Header from '@/components/shared/header.server';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,11 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${spartan.variable}`}>
-        <header>KO staa</header>
-        <main className="font-spartan">
-          {children}
-        </main>
-        <footer>brat</footer>
+        <Header />
+        <main className="font-spartan">{children}</main>
       </body>
     </html>
   );
