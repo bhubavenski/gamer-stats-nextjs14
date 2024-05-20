@@ -14,6 +14,19 @@ const config = {
       fontFamily: {
         spartan: ['var(--font-spartan)'],
       },
+      color: {
+        primary: {
+          blue: {
+            100: '#5653ff',
+            200: '#0b0646',
+            300: '#181e3a',
+            400: '#0a1a2a',
+          },
+          cerise: {
+            100: '#F52D69',
+          }
+        },
+      },
     },
   },
 } satisfies Config;

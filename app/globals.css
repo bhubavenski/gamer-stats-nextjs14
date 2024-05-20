@@ -4,6 +4,48 @@
 
 @layer utilities {
   .flex-center {
-    @apply flex justify-center items-center
+    @apply flex justify-center items-center;
+  }
+
+  .gradiant-1 {
+    background: radial-gradient(
+        300.32% 66.57% at 2.99% 46.59%,
+        rgba(47, 44, 203, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      radial-gradient(
+        298.37% 68.95% at 63.97% 50.2%,
+        rgba(100, 26, 175, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(270deg, #0a1a2a 35.58%, rgba(10, 26, 42, 0) 100%), #030e1a;
+  }
+
+  .gradiant-2 {
+    background: linear-gradient(
+        272deg,
+        rgba(152, 53, 187, 0) 8.43%,
+        rgba(2, 16, 54, 0.2) 100%
+      ),
+      linear-gradient(90deg, rgba(9, 24, 43, 0) 0%, rgba(88, 64, 239, 0.2) 100%),
+      linear-gradient(0deg, #10172e 0%, #10172e 100%), #5973ff;
+  }
+
+  .gradiant-3 {
+    background: linear-gradient(
+        90deg,
+        rgba(9, 24, 43, 0) 0%,
+        rgba(88, 64, 239, 0.2) 100%
+      ),
+      #030e1a;
+  }
+
+  .gradiant-4 {
+    background: linear-gradient(
+        236deg,
+        rgba(149, 153, 239, 0.2) 0.48%,
+        rgba(0, 0, 0, 0) 55.37%
+      ),
+      #e9edff;
   }
 }
