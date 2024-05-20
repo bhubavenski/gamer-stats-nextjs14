@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, League_Spartan } from 'next/font/google';
 import './globals.css';
+import Footer from '@/components/footer';
 import React from 'react';
 import Header from '@/components/shared/header.server';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spartan.variable}`}>
         <Header />
         <main className="font-spartan">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
