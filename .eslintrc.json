@@ -5,19 +5,13 @@
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
-  "plugins": ["snakecasejs"],
-  "settings": {
-    "snakecasejs/filter": ["ClassDeclaration", "NewExpression"],
-    "snakecasejs/whitelist": ["externalPath", "setNumber"]
-  },
   "rules": {
-    "snakecasejs/snakecasejs": "error",
     "camelcase": [
       "error",
       {
-        "allow": ["League_Spartan"],
         "properties": "never",
-        "ignoreDestructuring": true
+        "ignoreDestructuring": true,
+        "allow": ["League_Spartan"] // regex pattern to allow snake_case
       }
     ]
   }
