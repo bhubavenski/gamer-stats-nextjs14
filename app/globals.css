@@ -48,4 +48,17 @@
       ),
       #e9edff;
   }
+  .gradiant-5 {
+    background: radial-gradient(
+        104.19% 179.29% at 97.26% 131.97%,
+        rgba(59, 31, 173, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      radial-gradient(
+        215.05% 369.46% at 7.53% 50%,
+        rgba(100, 26, 175, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      #0a1a2b;
+  }
 }

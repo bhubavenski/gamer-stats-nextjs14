@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, League_Spartan } from 'next/font/google';
 import './globals.css';
+import Footer from '@/components/footer';
 import React from 'react';
 
 const inter = Inter({
@@ -32,7 +33,7 @@ export default function RootLayout({
         <main className="font-spartan">
           {children}
         </main>
-        <footer>brat</footer>
+        <footer>< Footer /></footer>
       </body>
     </html>
   );
