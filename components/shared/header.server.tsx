@@ -15,7 +15,7 @@ export default function Header() {
         <div className="flex items-center gap-5">
           <p>Hi, HardSkull</p>
           <Avatar>
-            <AvatarImage src="/images/profile.png" />
+            <AvatarImage src="/images/twiter.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
