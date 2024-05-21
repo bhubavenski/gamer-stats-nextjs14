@@ -1,4 +1,4 @@
-import Sidebar from '@/components/game-library/sidebar.server';
+import Sidebar from '@/components/game-library/sidebar/sidebar.server';
 import React from 'react';
 
 export default function Layout({
