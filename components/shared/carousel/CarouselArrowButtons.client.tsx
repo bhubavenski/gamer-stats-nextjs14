@@ -7,6 +7,7 @@ import React, {
   useState,
 } from 'react';
 import { EmblaCarouselType } from 'embla-carousel';
+import { cn } from '@/lib/utils';
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -59,11 +60,14 @@ type PropType = PropsWithChildren<
 >;
 
 export const PrevButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props;
+  const { children, className, ...restProps } = props;
 
   return (
     <button
-      className="flex-center embla__button--prev absolute left-0 top-[52px] size-7 rounded-full bg-black"
+      className={cn(
+        'flex-center embla__button--prev absolute left-0 top-[52px] size-7 rounded-full bg-black',
+        className
+      )}
       type="button"
       {...restProps}
     >
@@ -80,11 +84,14 @@ export const PrevButton: React.FC<PropType> = (props) => {
 };
 
 export const NextButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props;
+  const { children, className, ...restProps } = props;
 
   return (
     <button
-      className="embla__button--next flex-center absolute right-0 top-[52px] size-7 rounded-full bg-black"
+      className={cn(
+        'embla__button--next flex-center absolute right-0 top-[52px] size-7 rounded-full bg-black',
+        className
+      )}
       type="button"
       {...restProps}
     >

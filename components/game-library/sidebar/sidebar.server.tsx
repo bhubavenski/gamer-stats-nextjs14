@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import SearchBar from './searchBar.server';
-import EmblaCarousel from './most-played-section/mostPlayedCarousel.client';
+import MonstPlayed_Carousel from './most-played-section/monstPlayed_Carousel.client';
+import GameLib_Carousel from './game-lib/GameLib_Carousel.client';
 
 export default function Sidebar() {
   return (
@@ -38,11 +39,16 @@ export default function Sidebar() {
       <section className="box-border px-2">
         <div className="box-border flex flex-col gap-3 rounded-lg bg-most_played_sec_bg px-2 py-4">
           <h4 className="text-lg font-medium">Most Played</h4>
-          <EmblaCarousel />
+          <MonstPlayed_Carousel />
         </div>
       </section>
-      
+
       <hr className=" border-t-2 border-t-line_devider" />
+
+      <section>
+        GameLibNav
+        <GameLib_Carousel/>
+      </section>
     </div>
   );
 }
