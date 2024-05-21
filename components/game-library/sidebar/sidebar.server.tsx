@@ -20,7 +20,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <SearchBar/>      
+      <SearchBar />
     </div>
   );
 }

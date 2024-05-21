@@ -1,3 +1,4 @@
+import Gamestats from '@/components/game-library/gamestats/gamestats.client';
 import Sidebar from '@/components/game-library/sidebar/sidebar.server';
 import React from 'react';
 
@@ -6,10 +7,10 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return( 
+  return (
     <div className='flex'>
-       <Sidebar/>
-       <div>Main content on left side</div>
+      <Sidebar />
+      <Gamestats />
     </div>
   )
 }
