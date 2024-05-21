@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${spartan.variable}`}>
         <Header />
-        <main className="font-spartan">{children}</main>
+        <main className="font-spartan text-zinc-100">{children}</main>
         <Footer/>
       </body>
     </html>
