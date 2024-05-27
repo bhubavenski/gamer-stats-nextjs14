@@ -2,7 +2,6 @@
 
 import React from 'react';
 import '@/styles/embla.css';
-import MostPlayedCard from '@/components/cards/MostPlayedCard.server';
 import {
   Carousel,
   CarouselContent,
@@ -14,56 +13,27 @@ import GmaeLibCard from '@/components/cards/GmaeLibCard';
 
 export function GameLib_Carousel() {
   return (
-    <div className="border-2 border-yellow-500">
+    <div className=" ">
       <Carousel
         opts={{
           dragFree: true,
+          loop: true
         }}
         orientation="vertical"
-        className="max-h-[600px] min-h-[600px] max-w-xs  overflow-hidden border-2 border-red-500"
+        className=" max-h-[600px] min-h-[600px] overflow-y-auto "
       >
-        <CarouselContent className="-mt-1 border-2 border-blue-500">
-          {Array.from({ length: 4 }).map((_, index) => (
+        <CarouselPrevious />
+        <CarouselContent className="">
+          {Array.from({ length: 16 }).map((_, index) => (
             <CarouselItem key={index} className="">
               <GmaeLibCard />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
+        
         <CarouselNext />
       </Carousel>
     </div>
-  );
-}
-
-/* <CarouselViewPort emblaRef={emblaRef}>
-  <CarouselContainer>
-    <MostPlayedCard />
-  </CarouselContainer>
-</CarouselViewPort>
-
-<PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-<NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} /> */
-
-export function CarouselOrientation() {
-  return (
-    <Carousel
-      opts={{
-        dragFree: true,
-      }}
-      orientation="vertical"
-      className="max-h-full max-w-xs  border-2 border-red-500"
-    >
-      <CarouselContent className="-mt-1 max-h-full border-2 border-blue-500">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="">
-            <MostPlayedCard />
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
   );
 }
 

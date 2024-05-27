@@ -45,7 +45,7 @@ export default function Sidebar() {
 
       <hr className=" border-t-2 border-t-line_devider" />
 
-      <section className=" flex max-h-[630px] min-h-[630px] flex-col  border-2 border-black bg-most_played_sec_bg">
+      <section className=" flex max-h-[630px] min-h-[630px] flex-col bg-most_played_sec_bg">
         <h3>GameLibNav</h3>
         
         <GameLib_Carousel />

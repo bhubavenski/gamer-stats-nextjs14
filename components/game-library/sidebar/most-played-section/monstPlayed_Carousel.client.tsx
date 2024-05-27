@@ -26,7 +26,9 @@ export function MostPlayed_Section() {
     <div className="relative">
       <CarouselViewPort emblaRef={emblaRef}>
         <CarouselContainer>
-          <MostPlayedCard />
+          {Array.from({ length: 6 }).map((_, index) => (
+            <MostPlayedCard key={index}/>
+          ))}
         </CarouselContainer>
       </CarouselViewPort>
 
@@ -34,6 +36,6 @@ export function MostPlayed_Section() {
       <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
     </div>
   );
-};
+}
 
 export default MostPlayed_Section;
