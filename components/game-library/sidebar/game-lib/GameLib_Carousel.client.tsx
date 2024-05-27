@@ -13,7 +13,7 @@ import GmaeLibCard from '@/components/cards/GmaeLibCard';
 
 export function GameLib_Carousel() {
   return (
-    <div className="border-2 border-red-400">
+    <div className="">
       <Carousel
         opts={{
           align: 'start',
@@ -22,7 +22,7 @@ export function GameLib_Carousel() {
         orientation="vertical"
         className="size-full max-w-xs "
       >
-        <CarouselContent className="-mt-1 h-[600px] gap-0">
+        <CarouselContent className="-mt-1 h-[600px]">
           {Array.from({ length: 15 }).map((_, index) => (
             <CarouselItem key={index} className="pt-1 md:basis-1">
               <GmaeLibCard />
