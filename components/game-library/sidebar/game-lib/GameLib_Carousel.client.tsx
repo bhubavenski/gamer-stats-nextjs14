@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
+import GmaeLibCard from '@/components/cards/GmaeLibCard';
 
 export function GameLib_Carousel() {
   return (
@@ -24,7 +25,7 @@ export function GameLib_Carousel() {
         <CarouselContent className="-mt-1 border-2 border-blue-500">
           {Array.from({ length: 4 }).map((_, index) => (
             <CarouselItem key={index} className="">
-              <MostPlayedCard />
+              <GmaeLibCard />
             </CarouselItem>
           ))}
         </CarouselContent>
