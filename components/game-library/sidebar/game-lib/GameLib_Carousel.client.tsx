@@ -13,14 +13,14 @@ import GmaeLibCard from '@/components/cards/GmaeLibCard';
 
 export function GameLib_Carousel() {
   return (
-    <div className="">
+    <div className="flex-1">
       <Carousel
         opts={{
           align: 'start',
           dragFree: true,
         }}
         orientation="vertical"
-        className="size-full max-w-xs "
+        className=" "
       >
         <CarouselContent className="-mt-1 h-[600px]">
           {Array.from({ length: 15 }).map((_, index) => (
