@@ -6,13 +6,6 @@
     "prettier"
   ],
   "rules": {
-    "camelcase": [
-      "error",
-      {
-        "properties": "never",
-        "ignoreDestructuring": true,
-        "allow": ["League_Spartan"]
-      }
-    ]
+    "camelcase": "off"
   }
 }

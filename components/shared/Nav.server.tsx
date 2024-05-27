@@ -4,8 +4,8 @@ import { navLinks } from '@/constants';
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -17,7 +17,7 @@ export default function Nav() {
           <Link
             href={item.href}
             key={item.href}
-            className={clsx(`flex-center rounded-md px-5 py-2 `, {
+            className={cn(`flex-center rounded-md px-5 py-2 `, {
               'button-grey': pathname === item.href,
             })}
           >

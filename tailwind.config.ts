@@ -19,6 +19,9 @@ const config = {
     },
     extend: {
       colors: {
+        validation_green: 'rgba(36, 255, 163, 1)',
+        line_devider: 'rgba(86, 83, 255, 0.5)',
+        most_played_sec_bg: 'rgba(16, 23, 46, 1)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

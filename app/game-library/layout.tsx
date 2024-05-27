@@ -6,10 +6,10 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return( 
-    <div className='flex'>
-       <Sidebar/>
-       <div>Main content on left side</div>
+  return (
+    <div className="flex">
+      <Sidebar />
+      <div>Main content on left side</div>
     </div>
-  )
+  );
 }

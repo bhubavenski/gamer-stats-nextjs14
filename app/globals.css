@@ -183,6 +183,34 @@
       linear-gradient(90deg, rgba(9, 24, 43, 0) 0%, rgba(88, 64, 239, 0.2) 100%),
       #10172e;
   }
+
+  .game-lib-side-nav-header-gradiant {
+    background: var(
+      --Library_Header,
+      linear-gradient(
+        272deg,
+        rgba(152, 53, 187, 0) 8.43%,
+        rgba(2, 16, 54, 0.2) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(9, 24, 43, 0) 0%,
+        rgba(88, 64, 239, 0.2) 100%
+      ),
+      #10172e
+    );
+    box-shadow: 0px 2px 7.1px 0px rgba(8, 0, 37, 0.62);
+  }
+
+  .Library_Game_cards {
+    border: 1px solid var(--Friends_base, #181e3a);
+    background: var(
+      --Library_Game_cards,
+      linear-gradient(90deg, rgba(9, 24, 43, 0) 0%, rgba(88, 64, 239, 0.2) 100%)
+    );
+  }
+
+ 
 }
 
 /*

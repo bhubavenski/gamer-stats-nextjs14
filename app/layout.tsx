@@ -13,7 +13,7 @@ const inter = Inter({
 
 const spartan = League_Spartan({
   subsets: ['latin'],
-  weight: ['100', '400', '500'],
+  weight: ['100', '200', '300', '400', '500'],
   variable: '--font-spartan',
 });
 
