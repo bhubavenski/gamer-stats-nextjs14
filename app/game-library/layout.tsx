@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <div className="flex">
       <Sidebar />
-      <div>Main content on left side</div>
+      <main className="flex-1 font-spartan text-zinc-100">{children}</main>
     </div>
   );
 }
