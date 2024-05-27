@@ -1,33 +1,25 @@
-import GmaeLibCard from '@/components/cards/GmaeLibCard';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
+import Image from 'next/image';
 import React from 'react';
 
 export default function page() {
   return (
-    <div className="flex h-full items-center justify-center border-2 bg-red-500">
-      <Carousel
-        opts={{
-          align: 'start',
-        }}
-        orientation="vertical"
-        className="w-full max-w-xs"
-      >
-        <CarouselContent className="-mt-1 h-[200px]">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="pt-1 md:basis-1/2">
-              <GmaeLibCard />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+    <div className="flex-center h-full bg-black">
+      <div className="relative size-7 rounded-full shadow">
+        <Image
+          src="/icons/elipse2.svg"
+          alt=""
+          width={28}
+          height={28}
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full "
+        />
+        <Image
+          src="/icons/arrow-right.svg"
+          alt=""
+          width={14}
+          height={16}
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     </div>
   );
 }

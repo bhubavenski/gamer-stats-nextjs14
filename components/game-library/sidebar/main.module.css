@@ -1,0 +1,11 @@
+.bgnamama {
+  border-bottom: 1px solid #181e3a;
+  background: linear-gradient(
+      90deg,
+      rgba(9, 24, 43, 0) 0%,
+      rgba(88, 64, 239, 0.2) 100%
+    ),
+    #10172e;
+  box-shadow: 0px 1px 4.2px 0px rgba(0, 0, 0, 0.25);
+}
+

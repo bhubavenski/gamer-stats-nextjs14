@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
 import SearchBar from './searchBar.server';
-import MonstPlayed_Carousel from './most-played-section/monstPlayed_Carousel.client';
-import GameLib_Carousel from './game-lib/GameLib_Carousel.client';
+import MonstPlayed_Carousel from './monstPlayed_Carousel.client';
+import GameLib_Carousel from './GameLib_Carousel.client';
+import styles from './main.module.css'
+import { cn } from '@/lib/utils';
 
 export default function Sidebar() {
   return (
@@ -46,10 +48,49 @@ export default function Sidebar() {
       <hr className=" border-t-2 border-t-line_devider" />
 
       <section className=" flex max-h-[630px] min-h-[630px] flex-col bg-most_played_sec_bg">
-        <h3>GameLibNav</h3>
-        
+        <nav className={cn('box-border  p-[10px]', styles.bgnamama)}>
+          <ul className="flex gap-3">
+            <li className="box-border p-[5px]">
+              <button
+                className={cn(`flex-center rounded-md px-5 py-2 button-grey`)}
+              >
+                Favourites
+              </button>
+            </li>
+            <Image
+              src="/icons/ver-line-div"
+              alt="devider"
+              width={18}
+              height={0}
+              className=""
+            />
+            <li className="box-border p-[5px]">
+              <button className={cn(`flex-center rounded-md px-5 py-2`)}>
+                All
+              </button>
+            </li>
+            <div className=" w-px "></div>
+            <li className="box-border p-[5px]">
+              <button className={cn(`flex-center rounded-md px-5 py-2`)}>
+                Action
+              </button>
+            </li>
+          </ul>
+        </nav>
+
         <GameLib_Carousel />
       </section>
+
+      <hr className=" border-t-2 border-t-line_devider" />
+
+      <section className="box-border px-2">
+        <div className="box-border flex flex-col gap-3 rounded-lg bg-most_played_sec_bg px-[10px] py-[15px]">
+          <h4 className="text-lg font-medium">Most Played</h4>
+          <MonstPlayed_Carousel />
+        </div>
+      </section>
+
+      <hr className=" border-t-2 border-t-line_devider" />
     </div>
   );
 }

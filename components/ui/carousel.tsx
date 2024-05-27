@@ -4,10 +4,10 @@ import * as React from 'react';
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from 'embla-carousel-react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -157,7 +157,7 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div ref={carouselRef} className="h-full overflow-hidden">
       <div
         ref={ref}
         className={cn(
@@ -201,26 +201,43 @@ const CarouselPrevious = React.forwardRef<
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
   return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn(
-        'absolute  h-8 w-8 rounded-full bg-black',
-        orientation === 'horizontal'
-          ? 'left-1 top-1/2 -translate-y-1/2'
-          : 'top-12 left-1/2 -translate-x-1/2 rotate-90',
-        className
+    <>
+      {canScrollPrev && (
+        <button
+          className={cn(
+            'absolute',
+            orientation === 'horizontal'
+              ? 'left-1 top-1/2 -translate-y-1/2'
+              : 'top-5 left-1/2 -translate-x-1/2 rotate-90',
+            className
+          )}
+          disabled={!canScrollPrev}
+          onClick={scrollPrev}
+          {...props}
+        >
+          <div className="relative size-7 rounded-full shadow">
+            <Image
+              src="/icons/elipse2.svg"
+              alt=""
+              width={28}
+              height={28}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+            />
+            <Image
+              src="/icons/arrow-left.svg"
+              alt=""
+              width={14}
+              height={16}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
+          <span className="sr-only">Next slide</span>
+        </button>
       )}
-      disabled={!canScrollPrev}
-      onClick={scrollPrev}
-      {...props}
-    >
-      <ArrowLeft className="size-4" />
-      <span className="sr-only">Previous slide</span>
-    </Button>
+    </>
   );
 });
+
 CarouselPrevious.displayName = 'CarouselPrevious';
 
 const CarouselNext = React.forwardRef<
@@ -230,26 +247,43 @@ const CarouselNext = React.forwardRef<
   const { orientation, scrollNext, canScrollNext } = useCarousel();
 
   return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn(
-        'absolute h-8 w-8 rounded-full bg-black',
-        orientation === 'horizontal'
-          ? 'right-1 top-1/2 -translate-y-1/2'
-          : 'bottom-12 left-1/2 -translate-x-1/2 rotate-90',
-        className
+    <>
+      {canScrollNext && (
+        <button
+          className={cn(
+            'absolute',
+            orientation === 'horizontal'
+              ? 'right-1 top-1/2 -translate-y-1/2'
+              : 'bottom-5 left-1/2 -translate-x-1/2 rotate-90',
+            className
+          )}
+          disabled={!canScrollNext}
+          onClick={scrollNext}
+          {...props}
+        >
+          <div className="relative size-7 rounded-full shadow">
+            <Image
+              src="/icons/elipse2.svg"
+              alt=""
+              width={28}
+              height={28}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full "
+            />
+            <Image
+              src="/icons/arrow-right.svg"
+              alt=""
+              width={14}
+              height={16}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
+          <span className="sr-only">Next slide</span>
+        </button>
       )}
-      disabled={!canScrollNext}
-      onClick={scrollNext}
-      {...props}
-    >
-      <ArrowRight className="size-4" />
-      <span className="sr-only">Next slide</span>
-    </Button>
+    </>
   );
 });
+
 CarouselNext.displayName = 'CarouselNext';
 
 export {

@@ -18,7 +18,7 @@ export default function GmaeLibCard() {
               <h3 className="">Forza Horizon 5</h3>
               <h4>Racing</h4>
             </div>
-            <p className="font-normal text-emerald-400 ">366 hours</p>
+            <p className="font-normal text-emerald-400 ">366 hours | Friends Online (2)</p>
           </div>
         </div>
         <div className=" flex min-h-full flex-col justify-between rounded-xl bg-black px-1 py-2">
