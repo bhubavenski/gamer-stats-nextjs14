@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
-import GmaeLibCard from '@/components/cards/GmaeLibCard';
+import GmaeLibCard from '@/components/cards/GmaeLibCard.server';
 
 export function GameLib_Carousel() {
   return (
