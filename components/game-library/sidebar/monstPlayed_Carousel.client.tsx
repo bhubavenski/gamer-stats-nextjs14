@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
+import { mostPlayedCards } from '@/constants';
 
 export function MostPlayed_Section() {
   return (
@@ -20,9 +21,14 @@ export function MostPlayed_Section() {
       className=""
     >
       <CarouselContent className="">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="basis-1/1 pl-[15px]">
-            <MostPlayedCard showPlayTime={true} showGanre={false} />
+        {mostPlayedCards.map((card) => (
+          <CarouselItem key={card.name} className="basis-1/1 pl-[15px]">
+            <MostPlayedCard
+              showPlayTime={true}
+              showGanre={false}
+              name={card.name}
+              imgUrl={card.imgUrl}
+            />
           </CarouselItem>
         ))}
       </CarouselContent>

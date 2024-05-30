@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, League_Spartan } from 'next/font/google';
 import './globals.css';
-import Footer from '@/components/shared/footer';
+import Footer from '@/components/shared/footer.server';
 import React from 'react';
 import Header from '@/components/shared/header.server';
 
