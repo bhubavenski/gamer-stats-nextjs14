@@ -10,7 +10,7 @@ type Props = {
 
 export default function MostPlayedCard({ showPlayTime, showGanre, imgUrl, name }: Props) {
   return (
-    <div className="flex min-h-36 min-w-[74px] flex-col gap-[10px]">
+    <div className="flex min-h-36 min-w-[74px] max-w-[74px] flex-col gap-[10px]">
       <div className="relative h-[90px] w-[74px] overflow-hidden rounded-lg">
         <Image src={imgUrl} alt="" layout="fill" objectFit="cover" />
       </div>

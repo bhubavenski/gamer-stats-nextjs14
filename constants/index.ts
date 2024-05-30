@@ -16,22 +16,83 @@ export const navLinks = [
 export const mostPlayedCards = [
   {
     name: 'Valorant',
-    imgUrl: '/images/img1.png',
+    imgUrl: '/images/covers/valorant-cover.png',
+    playtime: 366,
   },
   {
     name: 'Forza Horizon 5',
-    imgUrl: '/images/img1.png',
+    imgUrl: '/images/covers/forza-cover.png',
+    playtime: 366,
   },
   {
-    name: 'CS GO 2 ',
-    imgUrl: '/images/img1.png',
+    name: 'Destiny',
+    imgUrl: '/images/covers/destiny-cover.png',
+    playtime: 366,
   },
   {
-    name: 'Elden Ring ',
-    imgUrl: '/images/img1.png',
+    name: 'Diablo',
+    imgUrl: '/images/covers/diablo-cover.png',
+    playtime: 366,
   },
   {
     name: 'The Witcher',
-    imgUrl: '/images/img1.png',
+    imgUrl: '/images/covers/witcher-cover.png',
+    playtime: 366,
+  },
+];
+
+export const gameLibCards = [
+  {
+    name: 'Valorant',
+    imgUrl: '/images/covers/valorant-cover.png',
+    playtime: 366,
+    onlineFriends: 2,
+    ganre: 'FPS',
+  },
+  {
+    name: 'Forza Horizon 5',
+    imgUrl: '/images/covers/forza-cover.png',
+    playtime: 366,
+    onlineFriends: 2,
+    ganre: 'Racing',
+  },
+  {
+    name: 'Destiny',
+    imgUrl: '/images/covers/destiny-cover.png',
+    playtime: 366,
+    onlineFriends: 2,
+    ganre: 'FPS',
+  },
+  {
+    name: 'Need For Speed',
+    imgUrl: '/images/covers/nfs-cover.png',
+    playtime: 366,
+    onlineFriends: 2,
+    ganre: 'AAA',
+  },
+  {
+    name: 'The Witcher',
+    imgUrl: '/images/covers/witcher-cover.png',
+    playtime: 366,
+    onlineFriends: 2,
+    ganre: 'AAA',
+  },
+];
+
+export const socials = [
+  {
+    name: 'Instagram',
+    imgUrl: '/images/socials/instagram.png',
+    href: '/instagram',
+  },
+  {
+    name: 'Twiter',
+    imgUrl: '/images/socials/twiter.png',
+    href: '/twiter',
+  },
+  {
+    name: 'Discord',
+    imgUrl: '/images/socials/discord.png',
+    href: '/discord',
   },
 ];

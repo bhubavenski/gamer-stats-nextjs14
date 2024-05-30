@@ -85,12 +85,12 @@ export default function Sidebar() {
 
       <section className="box-border px-2">
         <div className="box-border flex flex-col gap-3 rounded-lg bg-most_played_sec_bg px-[10px] py-[15px]">
-          <h4 className="text-lg font-medium">Most Played</h4>
+          <h4 className="text-lg font-medium">Recomendations</h4>
           <MonstPlayed_Carousel />
         </div>
       </section>
+      <div></div>
 
-      <hr className=" border-t-2 border-t-line_devider" />
     </div>
   );
 }

@@ -29,10 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${spartan.variable}`}>
+      <body className={`${inter.variable} ${spartan.variable} bg-[#10172E]`}>
         <Header />
         <main className="font-spartan text-zinc-100">{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

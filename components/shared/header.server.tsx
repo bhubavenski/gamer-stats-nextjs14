@@ -8,14 +8,14 @@ export default function Header() {
     <header className=" bg-gradiant-header-1 box-border flex flex-col gap-2 py-2 font-spartan text-white ">
       <div className=" box-border flex items-center justify-between px-8">
         <div className="flex items-center gap-5">
-          <Image src="/images/logo.svg" alt="logo" width={44} height={46} />
+          <Image src="/logo.svg" alt="logo" width={44} height={46} />
 
           <p>Gamer Stats</p>
         </div>
         <div className="flex items-center gap-5">
           <p>Hi, HardSkull</p>
           <Avatar>
-            <AvatarImage src="/images/twiter.png" />
+            <AvatarImage src="/images/socials/twiter.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
