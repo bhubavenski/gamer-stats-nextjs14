@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function Header() {
   return (
-    <header className=" bg-gradiant-header-1 box-border flex flex-col gap-2 py-2 font-spartan text-white ">
+    <header className="header-bg-gradiant flex flex-col justify-between bg-[#0A1A2B] pt-[10px] font-spartan text-white ">
       <div className=" box-border flex items-center justify-between px-8">
         <div className="flex items-center gap-5">
           <Image src="/logo.svg" alt="logo" width={44} height={46} />
@@ -25,3 +25,4 @@ export default function Header() {
     </header>
   );
 }
+

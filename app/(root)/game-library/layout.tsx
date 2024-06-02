@@ -7,7 +7,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex">
+    <div className="flex gap-1">
       <Sidebar />
       <main className="flex-1 font-spartan text-zinc-100">{children}</main>
     </div>

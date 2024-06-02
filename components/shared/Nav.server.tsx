@@ -11,7 +11,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gradiant-header-2 box-border flex items-center justify-between px-8 py-4">
+    <nav className="header-bottom-bg-gradiant box-border flex items-center justify-between px-8 py-4">
       <div className="flex w-[444px] justify-between text-xl">
         {navLinks.map((item) => (
           <Link
@@ -27,12 +27,7 @@ export default function Nav() {
       </div>
       <div className="flex items-center gap-3">
         <p className="text-lg">Friends</p>
-        <Image
-          src="/icons/friends.svg"
-          alt="friends"
-          width={24}
-          height={24}
-        />
+        <Image src="/icons/friends.svg" alt="friends" width={24} height={24} />
       </div>
     </nav>
   );

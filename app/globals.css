@@ -210,4 +210,23 @@
       rgba(88, 64, 239, 0.2) 100%
     );
   }
+
+  .header-bg-gradiant {
+    border: 1px solid #000;
+    background: radial-gradient(
+        840.94% 154.61% at 106.67% 50.65%,
+        rgba(100, 26, 175, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      #0a1a2b;
+  }
+
+  .header-bottom-bg-gradiant {
+    background: radial-gradient(
+        840.94% 154.61% at 106.67% 50.65%,
+        rgba(100, 26, 175, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      #0a1a2b;
+  }
 }
