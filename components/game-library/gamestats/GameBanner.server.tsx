@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function GameStats() {
+export default function GameBanner() {
     return (
         <div className='relative h-[480px] w-full'>
             <Image
