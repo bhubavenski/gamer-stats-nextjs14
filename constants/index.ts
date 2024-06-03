@@ -39,6 +39,21 @@ export const mostPlayedCards = [
     imgUrl: '/images/covers/witcher-cover.png',
     playtime: 366,
   },
+  {
+    name: 'Destiny',
+    imgUrl: '/images/covers/destiny-cover.png',
+    playtime: 366,
+  },
+  {
+    name: 'Diablo',
+    imgUrl: '/images/covers/diablo-cover.png',
+    playtime: 366,
+  },
+  {
+    name: 'The Witcher',
+    imgUrl: '/images/covers/witcher-cover.png',
+    playtime: 366,
+  },
 ];
 
 export const gameLibCards = [
@@ -47,6 +62,7 @@ export const gameLibCards = [
     imgUrl: '/images/covers/valorant-cover.png',
     playtime: 366,
     onlineFriends: 2,
+    lastPlayed: '7 hours ago',
     ganre: 'FPS',
   },
   {
@@ -54,6 +70,7 @@ export const gameLibCards = [
     imgUrl: '/images/covers/forza-cover.png',
     playtime: 366,
     onlineFriends: 2,
+    lastPlayed: '7 hours ago',
     ganre: 'Racing',
   },
   {
@@ -61,6 +78,7 @@ export const gameLibCards = [
     imgUrl: '/images/covers/destiny-cover.png',
     playtime: 366,
     onlineFriends: 2,
+    lastPlayed: '7 hours ago',
     ganre: 'FPS',
   },
   {
@@ -68,6 +86,7 @@ export const gameLibCards = [
     imgUrl: '/images/covers/nfs-cover.png',
     playtime: 366,
     onlineFriends: 2,
+    lastPlayed: '7 hours ago',
     ganre: 'AAA',
   },
   {
@@ -75,8 +94,10 @@ export const gameLibCards = [
     imgUrl: '/images/covers/witcher-cover.png',
     playtime: 366,
     onlineFriends: 2,
+    lastPlayed: '7 hours ago',
     ganre: 'AAA',
   },
+  
 ];
 
 export const socials = [

@@ -1,10 +1,12 @@
 import GameBanner from '@/components/game-library/GameBanner.server';
+import RecentlyPlayedGames from '@/components/game-library/RecentlyPlayedGames.server';
 import React from 'react';
 
 export default function page() {
   return (
-    <div className="">
+    <div className="size-full">
       <GameBanner />
+      <RecentlyPlayedGames />
     </div>
   );
 }
