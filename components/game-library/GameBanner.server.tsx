@@ -30,7 +30,7 @@ export default function GameBanner() {
           <Button />
         </div>
 
-        <div className=" self-end flex gap-9">
+        <div className=" flex gap-9 self-end">
           <Stat about="playtime" />
           <Stat about="achievements" />
           <Stat about="friends" />
@@ -40,29 +40,35 @@ export default function GameBanner() {
   );
 }
 
-interface StatProps {
-  about: string;
+type StatType = 'playtime' | 'achievements' | 'friends';
+
+interface StatConfig {
+  imageSrc: string;
+  label: string;
+  description: string;
 }
 
-const imageSrcMap: {
-  [key: string]: { imageSrc: string; text: string; info: string };
-} = {
+const imageSrcMap: Record<StatType, StatConfig> = {
   playtime: {
     imageSrc: '/icons/clock.svg',
-    text: 'PlayTime',
-    info: '32.5 Hours',
+    label: 'PlayTime',
+    description: '32.5 Hours',
   },
   achievements: {
     imageSrc: '/icons/medal.svg',
-    text: 'Achivments',
-    info: '13/54',
+    label: 'Achivments',
+    description: '13/54',
   },
   friends: {
     imageSrc: '/icons/friends.svg',
-    text: 'Friends',
-    info: '2 Online',
+    label: 'Friends',
+    description: '2 Online',
   },
 };
+
+interface StatProps {
+  about: StatType;
+}
 
 const Button = () => {
   'use client';
@@ -79,16 +85,16 @@ const Button = () => {
   );
 };
 
-const Stat = ({ about }: StatProps) => {
-  const game = imageSrcMap[about] || 'icons/default.svg';
+function Stat({ about }: StatProps) {
+  const { imageSrc, label, description } = imageSrcMap[about];
 
   return (
     <div className="flex gap-4">
-      <Image alt={game.text} src={game.imageSrc} width={28} height={28} />
+      <Image alt={label} src={imageSrc} width={28} height={28} />
       <div className="flex flex-col gap-1">
-        <p>{game.text}</p>
-        <p>{game.info}</p>
+        <p>{label}</p>
+        <p>{description}</p>
       </div>
     </div>
   );
-};
+}
