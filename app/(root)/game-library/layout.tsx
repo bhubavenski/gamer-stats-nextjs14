@@ -9,7 +9,9 @@ export default function Layout({
   return (
     <div className="flex gap-1">
       <Sidebar />
-      <main className="flex-1 font-spartan text-zinc-100">{children}</main>
+      <main className="flex-1 overflow-hidden font-spartan text-zinc-100">
+        {children}
+      </main>
     </div>
   );
 }

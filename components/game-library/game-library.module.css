@@ -5,3 +5,25 @@
 .button_bg {
   background-color: rgba(86, 83, 255, 1);
 }
+
+.game_carousel_bg {
+  background: radial-gradient(
+      166.67% 160.8% at 98.61% 6.73%,
+      rgba(144, 56, 255, 0.16) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      330.46% 73.03% at 23.44% -4.91%,
+      rgba(100, 26, 175, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #0a1a2b;
+}
+
+.img_bg {
+  border-radius: 10px;
+  background: linear-gradient(0deg, #000 -5.48%, rgba(0, 0, 0, 0) 100%);
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 0px 5px 0px #646260 inset;
+}
