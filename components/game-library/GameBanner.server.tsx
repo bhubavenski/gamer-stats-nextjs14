@@ -75,7 +75,7 @@ const Button = () => {
 
   return (
     <button
-      className={`flex-center box-border self-start rounded-md px-6 py-3 ${style.button_bg}`}
+      className={`flex-center box-border h-11 w-[162px] self-start rounded-md px-6 py-3 ${style.button_bg}`}
     >
       <div className="flex items-center gap-2 text-base">
         <span className=" text-lg"> View Stats</span>
@@ -90,10 +90,10 @@ function Stat({ about }: StatProps) {
 
   return (
     <div className="flex gap-4">
-      <Image alt={label} src={imageSrc} width={28} height={28} />
+      <Image alt={label} src={imageSrc} width={32} height={32} />
       <div className="flex flex-col gap-1">
-        <p>{label}</p>
-        <p>{description}</p>
+        <p className=' m-0 p-0'>{label}</p>
+        <p className=' m-0 p-0'>{description}</p>
       </div>
     </div>
   );

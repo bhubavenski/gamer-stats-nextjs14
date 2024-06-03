@@ -13,7 +13,10 @@ import style from './game-library.module.css';
 export default function RecentlyPlayedGames() {
   return (
     <div className={`box-border h-[330px] px-8 py-5 ${style.game_carousel_bg}`}>
-      <h2 className=" text-2xl">Recently Played Games </h2>
+      <div className="flex items-center justify-between">
+        <h2 className=" text-2xl">Recently Played Games </h2>
+        <span className=" text-2xl">More </span>
+      </div>
       <Carousel
         opts={{
           dragFree: true,
