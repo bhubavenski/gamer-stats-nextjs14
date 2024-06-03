@@ -6,7 +6,7 @@ export default function GameBanner() {
   return (
     <div className="relative box-border flex h-[480px] flex-col justify-between p-10">
       <Image
-        src="/images/banners/forza-banner2.png"
+        src="/images/banners/forza-banner3.png"
         alt="Game Banner"
         layout="fill"
         objectFit="cover"
