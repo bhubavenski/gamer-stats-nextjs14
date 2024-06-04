@@ -64,6 +64,7 @@ export const gameLibCards = [
     onlineFriends: 2,
     lastPlayed: '7 hours ago',
     ganre: 'FPS',
+    px: 0,
   },
   {
     name: 'Forza Horizon 5',
@@ -72,6 +73,8 @@ export const gameLibCards = [
     onlineFriends: 2,
     lastPlayed: '7 hours ago',
     ganre: 'Racing',
+    px: 0,
+
   },
   {
     name: 'Destiny',
@@ -80,6 +83,8 @@ export const gameLibCards = [
     onlineFriends: 2,
     lastPlayed: '7 hours ago',
     ganre: 'FPS',
+    px: 0,
+
   },
   {
     name: 'Need For Speed',
@@ -88,6 +93,8 @@ export const gameLibCards = [
     onlineFriends: 2,
     lastPlayed: '7 hours ago',
     ganre: 'AAA',
+    px: 200,
+
   },
   {
     name: 'The Witcher',
@@ -96,6 +103,8 @@ export const gameLibCards = [
     onlineFriends: 2,
     lastPlayed: '7 hours ago',
     ganre: 'AAA',
+    px: 100,
+
   },
   
 ];
