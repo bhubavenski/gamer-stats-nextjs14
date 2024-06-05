@@ -3,7 +3,7 @@ import React from 'react';
 import SearchBar from './SearchBar.server';
 import MonstPlayed_Carousel from './MonstPlayed_Carousel.client';
 import GameLib_Carousel from './GameLib_Carousel.client';
-import styles from './main.module.css'
+import styles from '../game-library.module.css'
 import { cn } from '@/lib/utils';
 
 export default function Sidebar() {
@@ -48,7 +48,7 @@ export default function Sidebar() {
       <hr className=" border-t-2 border-t-line_devider" />
 
       <section className=" flex max-h-[630px] min-h-[630px] flex-col bg-most_played_sec_bg">
-        <nav className={cn('box-border  p-[10px]', styles.bgnamama)}>
+        <nav className={cn('box-border  p-[10px]', styles.sidebar_nav_bn_bg)}>
           <ul className="flex gap-3">
             <li className="box-border p-[5px]">
               <button
