@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import style from './game-library.module.css';
 import Button from '../shared/Button.client';
 
 export default function GameBanner() {
@@ -16,7 +15,7 @@ export default function GameBanner() {
       />
 
       <div
-        className={`flex-center ${style.heart_bg} relative self-end rounded-full p-2`}
+        className={`flex-center relative self-end rounded-full bg-black/35 p-2`}
       >
         <Image
           alt="like this game"
@@ -28,7 +27,7 @@ export default function GameBanner() {
       <div className="relative flex justify-between">
         <div className=" flex flex-col gap-4">
           <h1 className=" text-4xl font-[700]">Forza Horizon 5</h1>
-          <Button label='View Stats' imgUrl='/icons/box.svg'/>
+          <Button label="View Stats" imgUrl="/icons/box.svg" />
         </div>
 
         <div className=" flex gap-9 self-end">
@@ -78,8 +77,8 @@ function Stat({ about }: StatProps) {
     <div className="flex gap-4">
       <Image alt={label} src={imageSrc} width={32} height={32} />
       <div className="flex flex-col gap-1">
-        <p className=' m-0 p-0'>{label}</p>
-        <p className=' m-0 p-0'>{description}</p>
+        <p className=" m-0 p-0">{label}</p>
+        <p className=" m-0 p-0">{description}</p>
       </div>
     </div>
   );

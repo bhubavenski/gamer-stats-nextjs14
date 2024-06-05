@@ -1,10 +1,18 @@
 import Image from 'next/image';
 import React from 'react';
 import SearchBar from './SearchBar.server';
-import MonstPlayed_Carousel from './MonstPlayed_Carousel.client';
-import GameLib_Carousel from './GameLib_Carousel.client';
-import styles from '../game-library.module.css'
+import styles from '../game-library.module.css';
 import { cn } from '@/lib/utils';
+import MostPlayedCard from '@/components/cards/MostPlayedCard.server';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from '@/components/ui/carousel';
+import { gameLibCards, mostPlayedCards } from '@/constants';
+import GmaeLibCard from '@/components/cards/GmaeLibCard.server';
 
 export default function Sidebar() {
   return (
@@ -41,7 +49,27 @@ export default function Sidebar() {
       <section className="box-border px-2">
         <div className="box-border flex flex-col gap-3 rounded-lg bg-most_played_sec_bg px-2 py-4">
           <h4 className="text-lg font-medium">Most Played</h4>
-          <MonstPlayed_Carousel />
+          <Carousel
+            opts={{
+              dragFree: true,
+            }}
+            className=""
+          >
+            <CarouselContent className="">
+              {mostPlayedCards.map((card) => (
+                <CarouselItem key={card.name} className="basis-1/1 pl-[15px]">
+                  <MostPlayedCard
+                    showPlayTime={true}
+                    showGanre={false}
+                    name={card.name}
+                    imgUrl={card.imgUrl}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
@@ -78,7 +106,24 @@ export default function Sidebar() {
           </ul>
         </nav>
 
-        <GameLib_Carousel />
+        <Carousel
+          opts={{
+            align: 'start',
+            dragFree: true,
+          }}
+          orientation="vertical"
+          className="mt-1 size-full overflow-hidden"
+        >
+          <CarouselContent className="-mt-1 h-full">
+            {gameLibCards.map((card, index) => (
+              <CarouselItem key={index} className="pt-1 md:basis-1 ">
+                <GmaeLibCard {...card} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </section>
 
       <hr className=" border-t-2 border-t-line_devider" />
@@ -86,11 +131,30 @@ export default function Sidebar() {
       <section className="box-border px-2">
         <div className="box-border flex flex-col gap-3 rounded-lg bg-most_played_sec_bg px-[10px] py-[15px]">
           <h4 className="text-lg font-medium">Recomendations</h4>
-          <MonstPlayed_Carousel />
+          <Carousel
+            opts={{
+              dragFree: true,
+            }}
+            className=""
+          >
+            <CarouselContent className="">
+              {mostPlayedCards.map((card) => (
+                <CarouselItem key={card.name} className="basis-1/1 pl-[15px]">
+                  <MostPlayedCard
+                    showPlayTime={true}
+                    showGanre={false}
+                    name={card.name}
+                    imgUrl={card.imgUrl}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
       <div></div>
-
     </div>
   );
 }
