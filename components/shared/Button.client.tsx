@@ -22,7 +22,6 @@ export default function Button({
   imgH = 20,
   ...props
 }: Props) : React.ReactNode {
-  console.log('a')
   return (
     <button
       className={cn(
