@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import SearchBar from './searchBar.server';
-import MonstPlayed_Carousel from './monstPlayed_Carousel.client';
+import SearchBar from './SearchBar.server';
+import MonstPlayed_Carousel from './MonstPlayed_Carousel.client';
 import GameLib_Carousel from './GameLib_Carousel.client';
 import styles from './main.module.css'
 import { cn } from '@/lib/utils';

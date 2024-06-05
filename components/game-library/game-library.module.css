@@ -2,10 +2,6 @@
   background: rgba(0, 0, 0, 0.35);
 }
 
-.button_bg {
-  background-color: rgba(86, 83, 255, 1);
-}
-
 .game_carousel_bg {
   background: radial-gradient(
       166.67% 160.8% at 98.61% 6.73%,

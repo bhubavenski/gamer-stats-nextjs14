@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import style from './game-library.module.css';
+import Button from '../shared/Button.client';
 
 export default function GameBanner() {
   return (
@@ -27,7 +28,7 @@ export default function GameBanner() {
       <div className="relative flex justify-between">
         <div className=" flex flex-col gap-4">
           <h1 className=" text-4xl font-[700]">Forza Horizon 5</h1>
-          <Button />
+          <Button label='View Stats' imgUrl='/icons/box.svg'/>
         </div>
 
         <div className=" flex gap-9 self-end">
@@ -69,21 +70,6 @@ const imageSrcMap: Record<StatType, StatConfig> = {
 interface StatProps {
   about: StatType;
 }
-
-const Button = () => {
-  'use client';
-
-  return (
-    <button
-      className={`flex-center box-border h-11 w-[162px] self-start rounded-md px-6 py-3 ${style.button_bg}`}
-    >
-      <div className="flex items-center gap-2 text-base">
-        <span className=" text-lg"> View Stats</span>
-        <Image alt="view stats" src="/icons/box.svg" width={20} height={20} />
-      </div>
-    </button>
-  );
-};
 
 function Stat({ about }: StatProps) {
   const { imageSrc, label, description } = imageSrcMap[about];
