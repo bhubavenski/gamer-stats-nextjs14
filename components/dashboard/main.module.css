@@ -1,0 +1,17 @@
+.header_gradiant_bg {
+  background: radial-gradient(
+      1441.37% 133.85% at 0.97% 50%,
+      rgba(91, 34, 183, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+      6482.38% 228.19% at 95.59% 39.62%,
+      rgba(73, 0, 228, 0.2) 0%,
+      rgba(76, 0, 237, 0) 100%
+    ),
+   #0a1a2a;
+}
+
+.link_bg {
+    background: #415171;
+}

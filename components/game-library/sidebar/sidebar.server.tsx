@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import SearchBar from './SearchBar.server';
 import styles from '../game-library.module.css';
 import { cn } from '@/lib/utils';
 import MostPlayedCard from '@/components/cards/MostPlayedCard.server';
@@ -13,6 +12,7 @@ import {
 } from '@/components/ui/carousel';
 import { gameLibCards, mostPlayedCards } from '@/constants';
 import GmaeLibCard from '@/components/cards/GmaeLibCard.server';
+import SearchBar from '@/components/shared/SearchBar.server';
 
 export default function Sidebar() {
   return (

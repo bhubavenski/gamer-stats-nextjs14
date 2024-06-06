@@ -1,7 +1,7 @@
 export const navLinks = [
   {
     name: 'Dashboard',
-    href: '/dashboard',
+    href: '/dashboard/overview',
   },
   {
     name: 'Game Library',
@@ -126,3 +126,23 @@ export const socials = [
     href: '/discord',
   },
 ];
+
+
+export const dashboard_header_buttons = [
+  {
+    label: 'Overview',
+    href: '/dashboard/overview'
+  },
+  {
+    label: 'Game History',
+    href: '/dashboard/game-history'
+  },
+  {
+    label: 'Insights',
+    href: '/dashboard/insights'
+  },
+  {
+    label: 'Guides',
+    href: '/dashboard/guides'
+  },
+]
