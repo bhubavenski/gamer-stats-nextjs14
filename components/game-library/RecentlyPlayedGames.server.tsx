@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '../ui/carousel';
-import { gameLibCards } from '@/constants';
-import Image from 'next/image';
-import style from './game-library.module.css';
+} from "../ui/carousel";
+import { gameLibCards } from "@/constants";
+import Image from "next/image";
+import style from "./game-library.module.css";
 
 export default function RecentlyPlayedGames() {
   return (
@@ -25,7 +25,7 @@ export default function RecentlyPlayedGames() {
       >
         <CarouselContent className="">
           {gameLibCards.map((card) => (
-            <CarouselItem key={card.name} className="basis-1/1 pr-[25px]">
+            <CarouselItem key={card.name} className="basis-auto pr-[25px]">
               <Item {...card} />
             </CarouselItem>
           ))}
