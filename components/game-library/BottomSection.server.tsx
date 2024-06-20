@@ -1,39 +1,43 @@
-import React from 'react';
+import React from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '../ui/carousel';
-import { gameLibCards } from '@/constants';
-import Image from 'next/image';
-import style from './game-library.module.css';
-import { cn } from '@/lib/utils';
+} from "../ui/carousel";
+import { gameLibCards } from "@/constants";
+import Image from "next/image";
+import style from "./game-library.module.css";
+import { cn } from "@/lib/utils";
 
 export default function BottomSection() {
   return (
-    <div className="h-full pl-9 pt-5">
-      <Carousel
-        opts={{
-          dragFree: true,
-        }}
-        className="top-4 mt-4 h-full"
-      >
-        <CarouselContent className="">
-          {gameLibCards.map((card, index) => (
-            <CarouselItem
-              key={card.name}
-              className={cn(`basis-1/1 absolute left-[${card.px}px]!`)}
-            >
-              <Item {...card} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <>
+      <div className="h-full px-9 pt-5">
+        <Carousel
+          opts={{
+            dragFree: true,
+          }}
+          className="mt-4"
+        >
+          <CarouselContent className="">
+            {gameLibCards.map((card, index) => (
+              <CarouselItem
+                key={index}
+                className={cn(
+                  ` ${index < gameLibCards.length - 1 ? "basis-3/12" : "basis-auto"}`
+                )}
+              >
+                <Item {...card} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+    </>
   );
 }
 
