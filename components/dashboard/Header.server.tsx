@@ -19,7 +19,7 @@ export default function Header() {
             <Link
               href={item.href}
               key={item.href}
-              className={cn(`flex-center rounded-md px-5 py-2 `, {
+              className={cn(`bg-[#415171] flex-center rounded-md px-5 py-2 `, {
                 'bg-primary-blue-100': pathname === item.href,
               })}
             >
